@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>LoraRails</title>
+    <title>LoraWAN Rails</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +9,10 @@
   </head>
 
   <body>
-    <%= yield %>
+      <%= render "layouts/menu" %>
+      <div class="row">
+          <%= yield %>
+          <%= render "layouts/footer" %>
+      </div>
   </body>
 </html>
