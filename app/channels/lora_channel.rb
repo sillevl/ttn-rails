@@ -1,5 +1,6 @@
 # Be sure to restart your server when you modify this file. Action Cable runs in a loop that does not support auto reloading.
 class LoraChannel < ApplicationCable::Channel
+
   def subscribed
     # stream_from "some_channel"
     stream_from "lora"
@@ -10,6 +11,7 @@ class LoraChannel < ApplicationCable::Channel
   end
 
   def update
-      ActionCable.server.broadcast "lora", message: "Hello world"
+      # Broadcasting is done from our ttn initializer
+      # ActionCable.server.broadcast "lora", message: msg
   end
 end
