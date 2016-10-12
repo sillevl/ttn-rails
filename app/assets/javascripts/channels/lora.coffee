@@ -7,7 +7,7 @@ App.lora = App.cable.subscriptions.create "LoraChannel",
 
   received: (data) ->
     # Called when there's incoming data on the websocket for this channel
-    alert data["message"]
+    $('#console').append($('<p></p>').text(data["message"]))
 
   update: ->
       @perform 'update'
