@@ -1,0 +1,5 @@
+server:
+    host: 'staging.thethingsnetwork.org'
+    port: 1883
+    username: '0000000000000000'
+    password: 'abcdefghijklmnopqrstuvwxyz'
